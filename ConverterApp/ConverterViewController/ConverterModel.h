@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MathBase.h"
 
 extern NSString *const kConverterModelDidUpdateNotification;
 
@@ -25,5 +26,8 @@ extern NSString *const kConverterModelDidUpdateNotification;
 - (void)updateWithText:(NSString *)text;
 
 - (void)convertValue;
+
+- (id<MathProtocol>)currentMathModel;
+- (NSNumber *)convertedValueWithMathModel:(id<MathProtocol>)math;
 
 @end
