@@ -8,6 +8,6 @@
 
 #import "MathBase.h"
 
-@interface MathCelsiusToK : MathBase
+@interface MathCelsiusToK : MathBase<MathProtocol>
 
 @end
