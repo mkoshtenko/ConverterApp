@@ -1,1 +1,12 @@
-../../OCMock/Source/OCMock/OCMBoxedReturnValueProvider.h
+//---------------------------------------------------------------------------------------
+//  $Id$
+//  Copyright (c) 2009 by Mulle Kybernetik. See License file for details.
+//---------------------------------------------------------------------------------------
+
+#import "OCMReturnValueProvider.h"
+
+@interface OCMBoxedReturnValueProvider : OCMReturnValueProvider 
+{
+}
+
+@end
