@@ -28,7 +28,7 @@
 		947842E81950C986008FB791 /* MathInchesToCm.m in Sources */ = {isa = PBXBuildFile; fileRef = 947842E71950C986008FB791 /* MathInchesToCm.m */; };
 		947842EB1950CB5E008FB791 /* MathCelsiusToK.m in Sources */ = {isa = PBXBuildFile; fileRef = 947842EA1950CB5E008FB791 /* MathCelsiusToK.m */; };
 		94DE16B21952D28100F12E2E /* ConverterModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16B01952D28100F12E2E /* ConverterModelTests.m */; };
-		94DE16B31952D28100F12E2E /* ConverterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16B11952D28100F12E2E /* ConverterViewControllerTests.m */; };
+		94DE16B31952D28100F12E2E /* ConverterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16B11952D28100F12E2E /* ConverterViewControllerTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		94DE16B81952E7B700F12E2E /* MathBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16B71952E7B700F12E2E /* MathBaseTests.m */; };
 		94DE16BA1952E92300F12E2E /* MathMilesToKmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16B91952E92300F12E2E /* MathMilesToKmTests.m */; };
 		94DE16BC1952E93600F12E2E /* MathLitersToGalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE16BB1952E93600F12E2E /* MathLitersToGalTests.m */; };

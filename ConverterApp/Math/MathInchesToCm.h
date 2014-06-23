@@ -8,6 +8,6 @@
 
 #import "MathBase.h"
 
-@interface MathInchesToCm : MathBase
+@interface MathInchesToCm : MathBase<MathProtocol>
 
 @end
