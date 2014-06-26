@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MathLitersToGal.h"
+
 
 @interface MathLitersToGalTests : XCTestCase
 
@@ -29,10 +31,24 @@
 - (void)testConvertNumberReturnsCorrectValue
 {
     // Arrange
-    
+    const float accuracy = .1f;
+    MathLitersToGal *MathLitersToGalInstance = [MathLitersToGal new];
     // Act
     
+    // Dictionary with test data, where 'key' is from and 'value' is to.
+    NSDictionary *dataToTest = @{
+                                 [NSNumber numberWithFloat:2.645f]:[NSNumber numberWithFloat:.7f],
+                                 [NSNumber numberWithFloat:.0f]:[NSNumber numberWithFloat:.0f],
+                                 [NSNumber numberWithFloat:.3f]:[NSNumber numberWithFloat:.08f],
+                                 };
+    
     // Assert
+    for(NSNumber *key in dataToTest){
+        NSNumber *from = key;
+        NSNumber *to = [dataToTest objectForKey:key];
+        XCTAssertEqualWithAccuracy([MathLitersToGalInstance convertNumber:from].floatValue, to.floatValue, accuracy, @"");
+    }
+
 }
 
 @end

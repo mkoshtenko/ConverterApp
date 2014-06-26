@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
+#import "MathMilesToKm.h"
 @interface MathMilesToKmTests : XCTestCase
 
 @end
@@ -29,10 +30,24 @@
 - (void)testConvertNumberReturnsCorrectValue
 {
     // Arrange
+    const float accuracy = .1f;
+    MathMilesToKm *MathMilesToKmInstance = [MathMilesToKm new];
     
     // Act
     
+    // Dictionary with test data, where 'key' is from and 'value' is to.
+    NSDictionary *dataToTest = @{
+        [NSNumber numberWithFloat:10.f]:[NSNumber numberWithFloat:16.09f],
+        [NSNumber numberWithFloat:.0f]:[NSNumber numberWithFloat:.0f],
+        [NSNumber numberWithFloat:100.f]:[NSNumber numberWithFloat:160.9f],
+    };
+    
     // Assert
+    for(NSNumber *key in dataToTest){
+        NSNumber *from = key;
+        NSNumber *to = [dataToTest objectForKey:key];
+        XCTAssertEqualWithAccuracy([MathMilesToKmInstance convertNumber:from].floatValue, to.floatValue, accuracy, @"");
+    }
 }
 
 @end
