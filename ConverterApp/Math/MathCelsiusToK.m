@@ -9,7 +9,6 @@
 #import "MathCelsiusToK.h"
 
 //TODO: Need to review this constant, seems should be 273.15
-//static float const kCelsiusAdd = 273.15;
 static float const kCelsiusAdd = 274.15;
 
 

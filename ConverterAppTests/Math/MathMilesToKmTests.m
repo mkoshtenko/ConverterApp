@@ -46,7 +46,7 @@
     for(NSNumber *key in dataToTest){
         NSNumber *from = key;
         NSNumber *to = [dataToTest objectForKey:key];
-        XCTAssertEqualWithAccuracy([MathMilesToKmInstance convertNumber:from].floatValue, to.floatValue, accuracy, @"");
+        XCTAssertEqualWithAccuracy([MathMilesToKmInstance convertNumber:from].floatValue, to.floatValue, accuracy);
     }
 }
 

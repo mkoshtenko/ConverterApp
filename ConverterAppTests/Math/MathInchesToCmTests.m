@@ -47,7 +47,7 @@
     for(NSNumber *key in dataToTest){
         NSNumber *from = key;
         NSNumber *to = [dataToTest objectForKey:key];
-        XCTAssertEqualWithAccuracy([MathInchesToCmInstance convertNumber:from].floatValue, to.floatValue, accuracy, @"");
+        XCTAssertEqualWithAccuracy([MathInchesToCmInstance convertNumber:from].floatValue, to.floatValue, accuracy);
     }
 }
 
