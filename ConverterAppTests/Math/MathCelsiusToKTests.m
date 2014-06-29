@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MathCelsiusToK.h"
 
 @interface MathCelsiusToKTests : XCTestCase
 
@@ -29,10 +30,23 @@
 - (void)testConvertNumberReturnsCorrectValue
 {
     // Arrange
-    
+    const float accuracy = .1f;
+    MathCelsiusToK *MathCelsiusToKInstance = [MathCelsiusToK new];
     // Act
     
+    // Dictionary with test data, where 'key' is from and 'value' is to.
+    NSDictionary *dataToTest = @{
+                                 [NSNumber numberWithFloat:12.f]:[NSNumber numberWithFloat:285.2f],
+                                 [NSNumber numberWithFloat:362.6f]:[NSNumber numberWithFloat:635.8f],
+                                 [NSNumber numberWithFloat:-31.2f]:[NSNumber numberWithFloat:242.f],
+                                 };
+
     // Assert
+    for(NSNumber *key in dataToTest){
+        NSNumber *from = key;
+        NSNumber *to = [dataToTest objectForKey:key];
+        XCTAssertEqualWithAccuracy([MathCelsiusToKInstance convertNumber:from].floatValue, to.floatValue, accuracy);
+    }
 }
 
 @end
